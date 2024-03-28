@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="text-align: center;">Energy Audit for DeLorean Time Machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #FF0000; /* Red color */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .offscreen {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .homeButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Home Button -->
+    <a href="index.html" class="homeButton"><button>Home</button></a>
+
+    <form id="deloreanAuditForm" onsubmit="displayThankYou()">
+        <h1 style="text-align: center;">Energy Audit for DeLorean Time Machine</h1>
+
+        <label for="timeTravelPowerSource">Time Travel Power Source:</label>
+        <input type="text" id="timeTravelPowerSource" name="timeTravelPowerSource" required>
+
+        <label for="fluxCapacitorEfficiency">Flux Capacitor Efficiency:</label>
+        <input type="number" id="fluxCapacitorEfficiency" name="fluxCapacitorEfficiency" required>
+
+        <label for="plutoniumConsumption">Plutonium Consumption (gigawatts per hour):</label>
+        <input type="number" id="plutoniumConsumption" name="plutoniumConsumption" required>
+
+        <label for="timeCircuits">Time Circuits Status:</label>
+        <select id="timeCircuits" name="timeCircuits" required>
+            <option value="functional">Functional</option>
+            <option value="malfunctioning">Malfunctioning</option>
+            <option value="offline">Offline</option>
+        </select>
+
+        <label for="lastTimeTravelDate">Last Time Travel Date:</label>
+        <input type="date" id="lastTimeTravelDate" name="lastTimeTravelDate" required>
+
+        <label for="destinationTime">Destination Time:</label>
+        <input type="datetime-local" id="destinationTime" name="destinationTime" required>
+
+        <button type="submit">Submit</button>
+        <input type="text" id="thankYouMessage" class="offscreen" value="Thank You!" readonly>
+    </form>
+
+    <script>
+        function displayThankYou() {
+            // Display the hidden "Thank You!" message by removing the offscreen class
+            document.getElementById('thankYouMessage').classList.remove('offscreen');
+            return false; // Prevent form submission
+        }
+    </script>
+
+</body>
+
+</html>
