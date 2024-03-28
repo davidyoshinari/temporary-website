@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="text-align: center;">Dymaxion Energy Audit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #FF0000; /* Red color */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .offscreen {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .homeButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Home Button -->
+    <a href="index.html" class="homeButton"><button>Home</button></a>
+
+    <form id="dymaxionAuditForm" onsubmit="displayThankYou()">
+        <h1 style="text-align: center;">Dymaxion Energy Audit</h1>
+
+        <label for="mainPowerSource">Main Power Source:</label>
+        <input type="text" id="mainPowerSource" name="mainPowerSource" required>
+
+        <label for="secondaryPowerSource">Secondary Power Source:</label>
+        <input type="text" id="secondaryPowerSource" name="secondaryPowerSource" required>
+
+        <label for="backupPowerSource">Backup Power Source:</label>
+        <input type="text" id="backupPowerSource" name="backupPowerSource" required>
+
+        <h2>Protoculture Matrix Efficiency:</h2>
+        <label for="protocultureLevels">Protoculture Levels during Audit:</label>
+        <input type="number" id="protocultureLevels" name="protocultureLevels" required>
+
+        <label for="protocultureConversionEfficiency">Protoculture Conversion Efficiency:</label>
+        <input type="number" id="protocultureConversionEfficiency" name="protocultureConversionEfficiency" required>
+
+        <h2>Reflex Furnaces Efficiency:</h2>
+        <label for="reflexFurnaceTemperature">Reflex Furnace Temperature during Audit:</label>
+        <input type="number" id="reflexFurnaceTemperature" name="reflexFurnaceTemperature" required>
+
+        <label for="reflexFurnaceOutput">Reflex Furnace Output (in Megawatts):</label>
+        <input type="number" id="reflexFurnaceOutput" name="reflexFurnaceOutput" required>
+
+        <h2>Robotechnology Systems:</h2>
+        <label for="numberOfVeritechFighters">Number of Veritech Fighters:</label>
+        <input type="number" id="numberOfVeritechFighters" name="numberOfVeritechFighters" required>
+
+        <label for="averageCombatEnergyConsumption">Average Combat Energy Consumption:</label>
+        <input type="number" id="averageCombatEnergyConsumption" name="averageCombatEnergyConsumption" required>
+
+        <label for="numberOfDestroids">Number of Destroids:</label>
+        <input type="number" id="numberOfDestroids" name="numberOfDestroids" required>
+
+        <label for="averageDestroidEnergyConsumption">Average Destroid Energy Consumption:</label>
+        <input type="number" id="averageDestroidEnergyConsumption" name="averageDestroidEnergyConsumption" required>
+
+        <h2>Transformation Systems:</h2>
+        <label for="numberOfTransformationsPerDay">Number of Transformations per Day:</label>
+        <input type="number" id="numberOfTransformationsPerDay" name="numberOfTransformationsPerDay" required>
+
+        <label for="energyCostPerTransformation">Energy Cost per Transformation:</label>
+        <input type="number" id="energyCostPerTransformation" name="energyCostPerTransformation" required>
+
+        <h2>Environmental Support Systems:</h2>
+        <label for="populationOnBoard">Population on Board:</label>
+        <input type="number" id="populationOnBoard" name="populationOnBoard" required>
+
+        <label for="averageEnvironmentalControlEnergyUsagePerInhabitant">Average Environmental Control Energy Usage per Inhabitant:</label>
+        <input type="number" id="averageEnvironmentalControlEnergyUsagePerInhabitant" name="averageEnvironmentalControlEnergyUsagePerInhabitant" required>
+
+        <button type="submit">Submit</button>
+        <input type="text" id="thankYouMessage" class="offscreen" value="Thank You!" readonly>
+    </form>
+
+    <script>
+        function displayThankYou() {
+            // Display the hidden "Thank You!" message by removing the offscreen class
+            document.getElementById('thankYouMessage').classList.remove('offscreen');
+            return false; // Prevent form submission
+        }
+    </script>
+
+</body>
+
+</html>
