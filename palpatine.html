@@ -1,101 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="text-align: center;">Energy Audit for Emperor Palpatine</title>
+    <title>My Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+        .center-links {
+            text-align: center;
         }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input,
-        select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        button {
-            padding: 10px;
-            background-color: #FF0000; /* Red color */
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .offscreen {
-            position: absolute;
-            left: -9999px;
-        }
-
-        .homeButton {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+        .contact-link {
+            margin-top: 5em;
         }
     </style>
 </head>
-
 <body>
+    <h1>Welcome to My Website!</h1>
+    <p>This is a simple GitHub Pages website.</p>
 
-    <!-- Home Button -->
-    <a href="index.html" class="homeButton"><button>Home</button></a>
-
-    <form id="palpatineAuditForm" onsubmit="displayThankYou()">
-        <h1 style="text-align: center;">Energy Audit for Emperor Palpatine</h1>
-
-        <label for="sithLordName">1. Sith Lord Name:</label>
-        <input type="text" id="sithLordName" name="sithLordName" value="Emperor Palpatine" readonly>
-
-        <label for="galacticLocation">2. Galactic Location:</label>
-        <input type="text" id="galacticLocation" name="galacticLocation" required>
-
-        <label for="darkSidePowerSource">3. Dark Side Power Source:</label>
-        <select id="darkSidePowerSource" name="darkSidePowerSource" required>
-            <option value="sithLightning">Sith Lightning</option>
-            <option value="darkForceEnergy">Dark Force Energy Converter</option>
-            <option value="deathStarCore">Death Star Core Reactor</option>
-        </select>
-
-        <label for="apprenticeName">4. Sith Apprentice Name:</label>
-        <input type="text" id="apprenticeName" name="apprenticeName" required>
-
-        <label for="galacticDomination">5. Galactic Domination Plan:</label>
-        <textarea id="galacticDomination" name="galacticDomination" rows="4" required></textarea>
-
-        <h2>Dark Side Energy Consumption:</h2>
-        <p>Instructions: Estimate the energy consumption for the dark side activities.</p>
-
-        <label for="lightsaberUsage">5.1 Lightsaber Usage (kW/h):</label>
-        <input type="number" id="lightsaberUsage" name="lightsaberUsage" required>
-
-        <label for="forceChokeUsage">5.2 Force Choke Usage (kW/h):</label>
-        <input type="number" id="forceChokeUsage" name="forceChokeUsage" required>
-
-        <label for="galacticSpeeches">5.3 Galactic Speeches (kW/h):</label>
-        <input type="number" id="galacticSpeeches" name="galacticSpeeches" required>
-
-        <button type="submit">Submit</button>
-        <input type="text" id="thankYouMessage" class="offscreen" value="Thank You!" readonly>
-    </form>
-
-    <script>
-        function displayThankYou() {
-            // Display the hidden "Thank You!" message by removing the offscreen class
-            document.getElementById('thankYouMessage').classList.remove('offscreen');
-            return false; // Prevent form submission
-        }
-    </script>
-
+    <!-- Centered links -->
+    <div class="center-links">
+        <!-- Link to Energy Audit page -->
+        <a href="palpatine.html">Energy Audit</a>
+        
+        <!-- Link to Contact page -->
+        <a href="contact.html" class="contact-link">Contact</a>
+    </div>
 </body>
-
 </html>
